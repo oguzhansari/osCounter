@@ -1,4 +1,4 @@
-# osGallery
+# osCounter
 
 jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş galeri uygulaması.
 

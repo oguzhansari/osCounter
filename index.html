@@ -20,9 +20,88 @@
 
     <section class="main-content">
       <h1>
-<a id="oscounter" class="anchor" href="#oscounter" aria-hidden="true"><span class="octicon octicon-link"></span></a>osCounter</h1>
+<a id="osgallery" class="anchor" href="#osgallery" aria-hidden="true"><span class="octicon octicon-link"></span></a>osGallery</h1>
 
-<p>jQuery ile geliştirilmiş CSS ile güçlendirilmiş basit javascript uygulaması. Miktarı arttırıp - azaltır.</p>
+<p>jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş galeri uygulaması.</p>
+
+<h3>
+<a id="Özellikleri" class="anchor" href="#%C3%96zellikleri" aria-hidden="true"><span class="octicon octicon-link"></span></a>Özellikleri</h3>
+
+<ul>
+<li>Seçilen özelliklere göre değeri arttırıp-düşürür</li>
+<li>Geçerli değeri alabilmek için gizli inputa name ataması yapabilme</li>
+<li>Maksimum arttırma ve düşürme sınırı</li>
+<li>Default değer atama</li>
+<li>İstenilen miktarda arttırma - düşürme</li>
+<li>Butonlara html ekleyebilme (tasarım için gerekli örneğin font-awesome ikonu kullanmak için <i></i>)</li>
+<li>İki çeşit uyarı göstergesi. (alert ve osModal (yakında))</li>
+<li>Uyarı metinleri tanımlayabilme</li>
+<li>Arttırma ve düşürme olaylarına fonksiyon yazabilme</li>
+</ul>
+
+<h3>
+<a id="kullanımı" class="anchor" href="#kullan%C4%B1m%C4%B1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kullanımı</h3>
+
+<p>Boş bir elemente atadığınız class, id, data gibi attiribute lere osCounter'ı uygulamanız yeterli.</p>
+
+<h4>
+<a id="1-oscounter-yöntemi-ile" class="anchor" href="#1-oscounter-y%C3%B6ntemi-ile" aria-hidden="true"><span class="octicon octicon-link"></span></a>1) $(?).osCounter(); Yöntemi ile</h4>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>div id=<span class="pl-s"><span class="pl-pds">"</span>osCounter<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/div<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+    <span class="pl-s"><span class="pl-pds">$(</span><span class="pl-k">function</span> <span class="pl-en">()</span> {</span>
+<span class="pl-s">        <span class="pl-s"><span class="pl-pds">$(</span><span class="pl-s"><span class="pl-pds">'</span>#osCounter<span class="pl-pds">'</span></span><span class="pl-pds">)</span></span>.osCounter({</span>
+<span class="pl-s">            osName: <span class="pl-s"><span class="pl-pds">"</span>amount<span class="pl-pds">"</span></span>,</span>
+<span class="pl-s">            osMaxUp: 100,</span>
+<span class="pl-s">            osMaxDown: 20,</span>
+<span class="pl-s">            osDefault: 40,</span>
+<span class="pl-s">            osSkip: 10,</span>
+<span class="pl-s">            osAlertType: <span class="pl-s"><span class="pl-pds">"</span>alert<span class="pl-pds">"</span></span>,</span>
+<span class="pl-s">            osTextUpTitle: <span class="pl-s"><span class="pl-pds">'</span>Maksimum Değer<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s">            osTextDownTitle: <span class="pl-s"><span class="pl-pds">'</span>Minimum Değer<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s">            osTextUpDesc: <span class="pl-s"><span class="pl-pds">'</span>Maksimum değere ulaştınız.<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s">            osTextDownDesc: <span class="pl-s"><span class="pl-pds">'</span>Minimum değere ulaştınız.<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s">            osDownFunc: <span class="pl-k">function</span> <span class="pl-en">(data)</span> { alert(<span class="pl-s"><span class="pl-pds">"</span>osDownFunc<span class="pl-pds">"</span></span>)<span class="pl-k">;</span> },</span>
+<span class="pl-s">            osUpFunc: <span class="pl-k">function</span> <span class="pl-en">(data)</span> { alert(<span class="pl-s"><span class="pl-pds">"</span>osUpFunc<span class="pl-pds">"</span></span>)<span class="pl-k">;</span> }</span>
+<span class="pl-s">        })<span class="pl-k">;</span></span>
+<span class="pl-s">    });</span>
+<span class="pl-s"><span class="pl-k">&lt;</span>/script<span class="pl-k">&gt;</span></span></pre></div>
+
+<h4>
+<a id="2-data-oscounter-yöntemi-ile" class="anchor" href="#2-data-oscounter-y%C3%B6ntemi-ile" aria-hidden="true"><span class="octicon octicon-link"></span></a>2) data-oscounter="{?}" Yöntemi ile</h4>
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>div data-oscounter=<span class="pl-s"><span class="pl-pds">"</span>{ 'osName': 'dataCounter', 'osMaxUp': 200, 'osMaxDown': 50, 'osDefault': 60, 'osSkip': 10 }<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/div<span class="pl-k">&gt;</span></pre></div>
+
+<h3>
+<a id="versiyon" class="anchor" href="#versiyon" aria-hidden="true"><span class="octicon octicon-link"></span></a>Versiyon</h3>
+
+<p>2.2</p>
+
+<h3>
+<a id="teknik" class="anchor" href="#teknik" aria-hidden="true"><span class="octicon octicon-link"></span></a>Teknik</h3>
+
+<p>jQuery 2.1.4 ( <a href="http://www.jquery.com">http://www.jquery.com</a> )</p>
+
+<h3>
+<a id="kurulum" class="anchor" href="#kurulum" aria-hidden="true"><span class="octicon octicon-link"></span></a>Kurulum</h3>
+
+<p>Aşağıdaki kodları </p> tagı içerisine yerleştirin.
+
+<div class="highlight highlight-source-shell"><pre><span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>jquery-2.1.4.min.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>script src=<span class="pl-s"><span class="pl-pds">"</span>osCounter.js<span class="pl-pds">"</span></span><span class="pl-k">&gt;&lt;</span>/script<span class="pl-k">&gt;</span>
+<span class="pl-k">&lt;</span>link href=<span class="pl-s"><span class="pl-pds">"</span>osCounter.css<span class="pl-pds">"</span></span> rel=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> /<span class="pl-k">&gt;</span></pre></div>
+
+<p>Yukarıdaki örnek kodları sitenize entegre edin ve kullanmaya başlayın.</p>
+
+<blockquote>
+<p>Teşekkürler. :)</p>
+
+<p>Oğuzhan SARI</p>
+
+<p><a href="mailto:os@oguzhansari.com">os@oguzhansari.com</a></p>
+
+<p><a href="http://www.oguzhansari.com">www.oguzhansari.com</a></p>
+</blockquote>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/oguzhansari/osCounter">osCounter</a> is maintained by <a href="https://github.com/oguzhansari">oguzhansari</a>.</span>
@@ -32,6 +111,16 @@
 
     </section>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-71837051-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>

@@ -51,7 +51,7 @@ Boş bir elemente atadığınız class, id, data gibi attiribute lere osCounter'
 jQuery 2.1.4 ( http://www.jquery.com )
 
 ### Kurulum
-Aşağıdaki kodları <head> tagı içerisine yerleştirin.
+Aşağıdaki kodları &lt;head&gt; tagı içerisine yerleştirin.
 
 ```sh
 <script src="jquery-2.1.4.min.js"></script>

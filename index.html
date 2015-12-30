@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" lang="tr" />
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="osCounter.js"></script>
+    <link href="osCounter.css" rel="stylesheet" />
+    <style>
+        * {  font-family: Arial, sans-serif; }
+        h2 { border-bottom: 2px solid #444; color: #888; margin-bottom: 10px; padding: 10px; display: inline-block; }
+        a { color: #085596; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h2>$(?).osCounter(); Yöntemi ile</h2>
+    <div id="osCounter"></div>
+    <script>
+        $(function () {
+            $('#osCounter').osCounter({
+                osName: "amount",
+                osMaxUp: 100,
+                osMaxDown: 20,
+                osDefault: 40,
+                osSkip: 10,
+                osAlertType: "alert",
+                osTextUpTitle: 'Maksimum Değer',
+                osTextDownTitle: 'Minimum Değer',
+                osTextUpDesc: 'Maksimum değere ulaştınız.',
+                osTextDownDesc: 'Minimum değere ulaştınız.',
+                osDownFunc: function (data) { alert("osDownFunc"); },
+                osUpFunc: function (data) { alert("osUpFunc"); }
+            });
+        });
+    </script>
+    <br /><br />
+    <h2>data-oscounter="{?}" Yöntemi ile</h2>
+    <div data-oscounter="{ 'osName': 'dataCounter', 'osMaxUp': 200, 'osMaxDown': 50, 'osDefault': 60, 'osSkip': 10 }"></div>
+    <br /><br />
+    <a href="http://oguzhansari.github.io/osCounter/" target="_blank">Go to osCounter Offical GitHub Page</a>
+    <br />
+    <br />
+    Oğuzhan SARI
+    <br />
+    <br />
+    <a href="www.oguzhansari.com" target="_blank">www.oguzhansari.com</a>
+</body>
+</html>

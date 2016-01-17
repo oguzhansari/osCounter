@@ -1,6 +1,6 @@
 # osCounter
 
-jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş galeri uygulaması.
+jQuery ile gelişitirilmiş CSS3 ile güçlendirilmiş arttır-azalt uygulaması.
 
 ### Özellikleri
   - Seçilen özelliklere göre değeri arttırıp-düşürür

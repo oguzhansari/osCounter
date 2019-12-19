@@ -47,7 +47,7 @@ Boş bir elemente atadığınız class, id, data gibi attiribute lere osCounter'
 ### Versiyon
 3.0
 - Yapı değiştirildi.
-- Destroy eklendi.
+- Destroy eklendi. elm.oscounter("destroy");
 
 ### Teknik
 jQuery 2.1.4+ ( http://www.jquery.com )
